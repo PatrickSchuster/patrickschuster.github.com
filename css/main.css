@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    background: #474444;
+    color: white;
+    height: auto;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+.landing {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 25vh;
+    padding-bottom: 20px;
+}
+
+#landing-text {
+    height: 100vh;
+}
+
+#about{
+    padding-bottom: 20px;
+    background: url('https://images.unsplash.com/photo-1488921618671-463b781ac428?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80') no-repeat center center;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-size: cover;
+    background-blend-mode: color;
+}
+
+#header {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+#header h2 {
+    display: inline-block;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+#highlight-buttons {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btn {
+    padding: 0.6rem 2rem;
+    border: 1px #ccc solid;
+    display: block;
+    margin-top: 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 100ms ease-in-out;
+}
+
+.btn:hover {
+    background: #333;
+}
+
+#first {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    background: url('https://images.unsplash.com/photo-1524022605235-4175bdb31928?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80') no-repeat center center;
+    background-size: cover;
+    background-blend-mode: color;
+}
+
+#contact {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    background: url('https://images.unsplash.com/photo-1517603250781-c4eac1449a80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1191&q=80') no-repeat center center;
+    background-size: cover;
+    background-blend-mode: color;
+}
+
+@media(min-width: 700px) {
+    .btn {
+        padding-top: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 1rem;
+    }
+}
