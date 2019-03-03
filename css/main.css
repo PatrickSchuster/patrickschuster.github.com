@@ -3,8 +3,8 @@
 body {
     font-family: 'Source Code Pro', monospace;
     margin: 0;
-    background: #474444;
-    color: 333;
+    background: black;
+    color: white;
     height: auto;
 }
 
@@ -20,11 +20,6 @@ h2 {
     font-size: 1.2rem;
     text-transform: capitalize;
     margin: 0;
-}
-
-a {
-    text-decoration: none;
-    color: #333;
 }
 
 img {
@@ -51,6 +46,34 @@ main {
     height: 100vh;
 }
 
+#portrait {
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+#aboutContent h1 {
+    margin-bottom: 20px;
+}
+
+#aboutContent div {
+    min-height: 200px;
+    padding: 10px;
+}
+
+#aboutText {
+    min-width: 300px;
+    overflow: hidden;
+}
+
+#aboutImage {
+    float: left;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    max-height: 200px;
+}
+
 #header {
     padding: 1.5rem;
     text-align: center;
@@ -67,9 +90,17 @@ main {
     padding-right: 30px;
 }
 
+a {
+    text-decoration: none;
+    font-style: italic;
+    color: white;
+}
+
 .btn {
+    color: white;
+    font-style: normal;
     padding: 0.6rem 2rem;
-    border: 1px #333 solid;
+    border: 1px white solid;
     display: block;
     margin-top: 2rem;
     border-radius: 50px;
@@ -79,26 +110,20 @@ main {
 
 .btn:hover {
     background: #333;
-    color: white;
-}
-
-#first {
-    background-image: linear-gradient(#2C3E50, #ABB2B9);
-    color: #333;
-}
-
-#about{
-    background-image: linear-gradient(#ABB2B9, #EAECEE);
-    color: #2C3E50;
-}
-
-#contact {
-    background-image: linear-gradient(#EAECEE, white);
-    color: #17202A;
+    border-style: dashed;
 }
 
 #contact h2 {
     margin-top: 20px;
+    text-transform: none;
+}
+
+@media (max-width: 700px) {
+    #aboutImage {
+        float: none;
+        width: auto;
+        margin-right: 0px;
+    }
 }
 
 @media(min-width: 700px) {
