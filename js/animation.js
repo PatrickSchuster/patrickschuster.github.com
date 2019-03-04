@@ -3,6 +3,7 @@ let stars = [];
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
+    console.log('windowWidth = ', windowWidth);
     setup();
 }
 
@@ -25,25 +26,24 @@ class Star {
         this.x = random(-windowWidth, windowWidth);
         this.y = random(-windowHeight, windowHeight);
         this.z = random(windowWidth);
+        this.col = color(random(255), random(255), random(255));
     }
 
     update(){
         this.z -= 10;
         if(this.z < 0){
-            this.x = random(-width, width);
-            this.y = random(-height, height);
+            this.x = random(-windowWidth, windowWidth);
+            this.y = random(-windowHeight, windowHeight);
             this.z = random(500, 800);
         }
     }
     
     show(){
         noStroke();
-        const sx = map(this.x / this.z, 0, 1, 0, width);
-        const sy = map(this.y / this.z, 0, 1, 0, height);
-        // stars with smaller z are smaller, stars with larger z are larger 
-        const size = map(this.z, 0, width, 10, 0);
-        fill(255);
-        ellipse(sx, sy, size, size);
+        const sx = map(this.x / this.z, 0, 1, 0, windowWidth);
+        const sy = map(this.y / this.z, 0, 1, 0, windowHeight);
+        stroke(this.col);
+        ellipse(sx, sy, 3, 3);
     }
 }
 

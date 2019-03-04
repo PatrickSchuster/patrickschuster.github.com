@@ -63,6 +63,8 @@ main {
 #aboutText {
     min-width: 300px;
     overflow: hidden;
+    text-align: left;
+    line-height: 30px;
 }
 
 #aboutImage {
@@ -92,8 +94,11 @@ main {
 
 a {
     text-decoration: none;
-    font-style: italic;
     color: white;
+}
+
+#link:hover {
+    font-style: italic;
 }
 
 .btn {
