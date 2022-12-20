@@ -3,7 +3,6 @@ let stars = [];
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-    console.log('windowWidth = ', windowWidth);
     setup();
 }
 
@@ -48,7 +47,7 @@ class Star {
 }
 
 function draw() {
-    background(0);
+    background('#001220');
     translate(windowWidth/2, windowHeight/2);
     for(let i = 0; i < stars.length; i++){
         stars[i].update();

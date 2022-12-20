@@ -1,96 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 body {
+    margin: 0;
     font-family: 'Source Code Pro', monospace;
-    margin: 0;
-    background: black;
     color: white;
-    height: auto;
+    background: #001220;
 }
 
-h1 {
-    font-weight: 400;
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin: 0;
-}
-
-h2 {
-    font-weight: 400;
-    font-size: 1.2rem;
-    text-transform: capitalize;
-    margin: 0;
-}
-
-img {
-    display: block;
-    width: 100%;
-}
-
-main {
-    max-width: 900px;
-    margin: auto;
-}
-
-.landing {
+section {
+    position: relative;
     display: flex;
-    height: 100%;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding-top: 20vh;
-    padding-bottom: 20vh;
+    min-height: 10em;
+    padding-top: 5em;
 }
 
-#landing-text {
-    height: 100vh;
-}
-
-#portrait {
-    max-width: 200px;
-    border-radius: 50%;
-}
-
-#aboutContent h1 {
-    margin-bottom: 20px;
-}
-
-#aboutContent div {
-    min-height: 200px;
-    padding: 10px;
-}
-
-#aboutText {
-    min-width: 300px;
-    overflow: hidden;
-    text-align: left;
-    line-height: 30px;
-    margin-top: 10vh;
-}
-
-#aboutImage {
-    float: left;
-    margin-right: 20px;
+#contact {
     display: flex;
-    justify-content: center;
-    overflow: hidden;
-    max-height: 200px;
-}
-
-#header {
-    padding: 1.5rem;
-    text-align: center;
-}
-
-#header h2 {
-    display: inline-block;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-
-#highlight-buttons {
-    padding-left: 30px;
-    padding-right: 30px;
+    column-gap: 1em;
+    justify-content: space-between;
 }
 
 a {
@@ -98,53 +27,25 @@ a {
     color: white;
 }
 
-#link:hover {
-    font-style: italic;
+#portrait {
+    max-width: 200px;
+    border-radius: 50%;
 }
 
-.btn {
-    color: white;
-    font-style: normal;
-    padding: 0.6rem 2rem;
-    border: 1px white solid;
-    display: block;
-    margin-top: 2rem;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background 100ms ease-in-out;
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.btn:hover {
-    background: #333;
-    border-style: dashed;
+.spacer {
+    aspect-ratio: 960 / 300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.btn:focus {
-    border-style: none;
-}
-
-#contact h2 {
-    margin-top: 20px;
-    text-transform: none;
-}
-
-@media (max-width: 700px) {
-    #aboutImage {
-        float: none;
-        width: auto;
-        margin-right: 0px;
-    }
-
-    #aboutText {
-        margin-top: 0;
-    }
-}
-
-@media(min-width: 700px) {
-    .btn {
-        padding-top: 1rem;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        padding-bottom: 1rem;
-    }
+.waves {
+    background-image: url('../images/waves.svg');
 }

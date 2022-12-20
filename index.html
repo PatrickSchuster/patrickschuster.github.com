@@ -1,56 +1,45 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <title>Patrick Schuster</title>
-	<link rel="stylesheet" href="css/main.css" type="text/css"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrick Schuster</title>
+    <link rel="stylesheet" href="./css/main.css" type="text/css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.dom.js"></script>
-	<script src="/js/animation.js"></script>
-  	<meta name="viewport" content="width=device-width, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
-  	<meta name="apple-mobile-web-app-capable" content="yes">
-  	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script src="/js/animation.js"></script>
 </head>
 <body>
-	<main>
-		<div class="landing" id="first">
-			<div id="landing-text">
-					<h1>Patrick Schuster</h1>
-					<h2>personal website</h2>
-					<div id="highlight-buttons">
-						<a href="#about" class="btn" id="view-work">About</a>
-						<a href="#contact" class="btn" id="view-work">Contact</a>
-					</div>
-				</div>
-		</div>
+    <section>
+        <h1>Patrick Schuster</h1>
+        <div id="contact">
+            <a href="https://stackoverflow.com/users/4419882/patrick" id="stackoverflow" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-stack-overflow"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/patrick-schuster-5ab324144/" id="linkedin" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-linkedin-square"></i>
+            </a>
+        </div>
+    </section>
 
-		<div class="landing" id="about">
-			<div id="aboutContent">
-				<h1>About</h1>
-				<div id="aboutImage">
-					<img id="portrait" src="/images/me.png" alt="A portrait photo of Patrick Schuster."/>
-				</div>
-				<div id="aboutText">
-					Living and working in Salzburg, Austria.<br/>
-					I studied computer science.<br/>
-					Passionate about strength sports. <br/>
-					Always interested in learning new skills.<br/>
-				</div>
-			</div>
-		</div>
+    <section id="about">
+        <div id="aboutImage">
+            <img id="portrait" src="./images/me.jpg" alt="A portrait photo of Patrick Schuster."/>
+        </div>
+        <ul id="aboutText">
+            <li>Living and working in Salzburg, Austria.</li>
+            <li>I studied computer science.</li>
+            <li>Always interested in learning new skills.</li>
+            <li>Passionate about physical fitness and lifting.</li>
+        </ul>
+    </section>
 
-		<div class="landing" id="contact">
-			<div id="landing-text">
-				<h1>Contact</h1>
-				<h2>You can find me on</h2>
-				<p>
-					<a id="link" href="https://github.com/PatrickSchuster">Github</a>
-				</p>
-			</div>
-		</div>
-	</main>
+    <div class="footer">
+        <div class="spacer waves"></div>
+    </div>
 </body>
 </html>
-
-
