@@ -50,6 +50,20 @@ a {
     border-radius: 50%;
 }
 
+#about-list {
+    margin-top: 1em;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "◦";
+    display: inline-block;
+    margin-right: 0.3rem;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
