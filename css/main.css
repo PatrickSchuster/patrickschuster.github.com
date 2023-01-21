@@ -16,7 +16,7 @@ body {
     height: 100%;
 }
 
-.sections-container {
+#sections-container {
     display: flex;
     flex-direction: column;
     padding-top: 20px;
@@ -93,11 +93,11 @@ particle {
     border: 3px dotted #001220;
     z-index: -1;
     opacity: 1;
-    animation: fade 2s linear;
+    animation: particleFade 2s linear;
     animation-iteration-count: infinite;
 }
 
-@keyframes fade {
+@keyframes particleFade {
     0% {
         opacity: 0;
     }
@@ -109,5 +109,30 @@ particle {
     }
     100% {
         opacity: 0;
+    }
+}
+
+satellite {
+    pointer-events: none;
+    position: fixed;
+    font-size: 30px;
+    z-index: -1;
+    opacity: 0;
+    top: 50px;
+    animation: satelliteFade 3s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes satelliteFade {
+    0% {
+        opacity: 0;
+    }
+    66% {
+        opacity: 1;
+        font-size: 60px;
+    }
+    100% {
+        opacity: 0;
+        font-size: 30px;
     }
 }

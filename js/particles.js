@@ -1,3 +1,5 @@
+import { debounce } from "./util.js";
+
 function animate() {
     clearAllParticles();
     const bodyEl = document.querySelector("body");
@@ -37,19 +39,9 @@ function clearAllParticles() {
     });
 }
 
-function debounce(func, wait) {
-    let timeoutId;
-    return function(...args) {
-      const self = this;
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(function () {
-        func.apply(self, args);
-      }, wait);
-    }
-}
-
-const debouncedAnimation = debounce(animate, 100);
+const debouncedAnimation = debounce(animate, 250);
 window.addEventListener("resize", () => {
+    console.log("resize");
     debouncedAnimation();
 });
 
