@@ -69,9 +69,9 @@ section {
 
 #contact {
     display: flex;
-    column-gap: 1em;
+    column-gap: 2em;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 1.5em;
 }
 
 a {
