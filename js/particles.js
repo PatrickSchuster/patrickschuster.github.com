@@ -39,7 +39,7 @@ function clearAllParticles() {
     });
 }
 
-const debouncedAnimation = debounce(animate, 250);
+const debouncedAnimation = debounce(animate, 500);
 window.addEventListener("resize", () => {
     console.log("resize");
     debouncedAnimation();
