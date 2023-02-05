@@ -38,27 +38,35 @@ section {
 }
 
 .card {
-    flex: 1 1 0px;
-}
-
-.card > ul {
-    border-left: 1px dotted white;
-    border-bottom: 1px dotted white;
-    border-right: 1px dotted white;
-    min-height: 100%;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid white;
+    border-radius: 5px;
 }
 
 .card > h3 {
     background-color: white;
     text-align: center;
     color: var(--dark-blue);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    padding: 0 1em 0 1em;
+}
+
+.card > .anim {
+    z-index: -1;
+    background-color: black;
+    min-width: 100%;
+    position: absolute;
+    animation: load .5s ease-in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes load {
+    0% {
+        min-height: 0%;
+    }
+    100% {
+        min-height: 100%;
+    }
 }
 
 @media (max-width: 600px) {
