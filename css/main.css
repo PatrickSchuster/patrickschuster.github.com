@@ -42,6 +42,8 @@ section {
     overflow: hidden;
     border: 1px solid white;
     border-radius: 5px;
+    display:flex;
+    flex-direction: column;
 }
 
 .card > h3 {
@@ -52,20 +54,27 @@ section {
 }
 
 .card > .anim {
-    z-index: -1;
-    background-color: black;
-    min-width: 100%;
     position: absolute;
-    animation: load .5s ease-in;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    background-color: black;
+    animation: load 3s ease;
     animation-fill-mode: forwards;
+    z-index: -1;
 }
 
 @keyframes load {
-    0% {
-        min-height: 0%;
+    0%{
+        min-width: 100px;
+        min-height: 100px;
     }
     100% {
-        min-height: 100%;
+        min-width: 700px;
+        min-height: 700px;
     }
 }
 
@@ -89,6 +98,10 @@ section {
     column-gap: 2em;
     align-items: center;
     justify-content: center;
+}
+
+#contact > h2 {
+    font-size: 0.8em;
 }
 
 #image-and-links-container {
