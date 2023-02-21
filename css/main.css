@@ -34,7 +34,8 @@ section {
 .card-container {
     display: flex;
     flex-direction: row;
-    gap: 2.5em;
+    gap: 1vmin;
+    max-width: 70%;
 }
 
 .card {
@@ -44,6 +45,7 @@ section {
     border-radius: 5px;
     display:flex;
     flex-direction: column;
+    max-width: 33%;
 }
 
 .card > h3 {
@@ -78,9 +80,9 @@ section {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     #sections-container {
-        gap: 1em;
+        gap: 5vmin;
     }
     section {
         font-size: 1em;
@@ -90,6 +92,11 @@ section {
     }
     .card-container {
         flex-direction: column;
+        max-width: 100%;
+        gap: 2vmin;
+    }
+    .card {
+        max-width: 100%;
     }
 }
 
