@@ -5,7 +5,7 @@ function animate() {
     const bodyEl = document.querySelector("body");
     const vw = getViewportWidth();
     const vh = getViewportHeight();
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 50; i++) {
         addParticle();
     }
 
@@ -39,10 +39,7 @@ function clearAllParticles() {
     });
 }
 
-const debouncedAnimation = debounce(animate, 500);
-window.addEventListener("resize", () => {
-    console.log("resize");
-    debouncedAnimation();
-});
+const debouncedAnimation = debounce(animate, 3000);
+window.addEventListener("resize", () => debouncedAnimation());
 
 animate();
