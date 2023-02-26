@@ -19,7 +19,7 @@ body {
 #sections-container {
     display: flex;
     flex-direction: column;
-    gap: 5em;
+    gap: 5vmin;
 }
 
 section {
@@ -92,9 +92,17 @@ a {
     padding: 0 1em 0 1em;
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
+    #sections-container {
+        gap: 1vmin;
+    }
+    #search {
+        width: 100vw;
+    }
     .card-container {
+        width: 100vw;
         flex-direction: column;
+        gap: 5vmin;
     }
     .spacer {
         opacity: 0.2;

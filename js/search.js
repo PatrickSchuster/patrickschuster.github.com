@@ -4,6 +4,11 @@ const search = document.getElementById("search")
 const favoriteTechEl = document.getElementById("favorite-tech")
 const experienceTechEl = document.getElementById("experienced-tech")
 
+setInterval(() => {
+    const randomTech = [...favorites.keys()][Math.floor(Math.random() * [...favorites.keys()].length)]
+    search.setAttribute("placeholder", `${randomTech} ...`)
+}, 2000)
+
 const favorites = new Map([
     ["javascript", "https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"],
     ["typescript", "https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"],
@@ -53,14 +58,14 @@ const experience = new Map([
 function filter(name) {
     favoriteTechEl.replaceChildren();
     experienceTechEl.replaceChildren();
-    [...favorites.keys()].filter(key => key.startsWith(name)).forEach(match => favoriteTechEl.appendChild(createImg(name, match, favorites)));
-    [...experience.keys()].filter(key => key.startsWith(name)).forEach(match => experienceTechEl.appendChild(createImg(name, match, experience)));
+    [...favorites.keys()].filter(key => key.startsWith(name)).forEach(match => favoriteTechEl.appendChild(createImg(match, favorites)));
+    [...experience.keys()].filter(key => key.startsWith(name)).forEach(match => experienceTechEl.appendChild(createImg(match, experience)));
 }
 
-function createImg(name, match, hashmap) {
+function createImg(match, hashmap) {
     const img = document.createElement("img")
     img.setAttribute("src", hashmap.get(match))
-    img.setAttribute("alt", `Name of technology starting with ${name}`)
+    img.setAttribute("alt", `${match}`)
     return img
 }
 
