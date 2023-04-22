@@ -16,6 +16,40 @@ body {
     height: 100%;
 }
 
+body h1 {
+    margin-top: 1vmin;
+}
+
+.fa-wrapper {
+    position: relative;
+}
+
+.fa-crossed-out {
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    opacity: 0.8;
+    cursor: help;
+}
+
+.fa-crossed-out:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -1.3em;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 12px;
+    background-color: black;
+    color: white;
+    font-size: 0.4em;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
 #sections-container {
     display: flex;
     flex-direction: column;
