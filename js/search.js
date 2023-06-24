@@ -66,6 +66,7 @@ function createImg(match, hashmap) {
     const img = document.createElement("img")
     img.setAttribute("src", hashmap.get(match))
     img.setAttribute("alt", `${match}`)
+    img.setAttribute("class", "shield")
     return img
 }
 
