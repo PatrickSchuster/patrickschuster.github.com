@@ -128,6 +128,7 @@ a {
 .shield {
     border-radius: 3px;
     margin: 0 2px 0 2px;
+    height: 2.2vmin;
 }
 
 @media only screen and (max-width: 800px) {
