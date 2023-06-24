@@ -69,7 +69,7 @@ function createImg(match, hashmap) {
     return img
 }
 
-const debouncedFilter = debounce(filter, 200)
+const debouncedFilter = debounce(filter, 0)
 search.addEventListener("input", (e) => debouncedFilter(e.target.value))
 
 filter("")
