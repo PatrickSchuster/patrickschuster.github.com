@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Consolas", "Courier New", Courier, monospace;
 }
 
 :root {
@@ -89,7 +87,8 @@ a {
 }
 
 #portrait {
-    max-width: 15vmin;
+    width: 15vmin;
+    height: 15vmin;
     border-radius: 50%;
 }
 
