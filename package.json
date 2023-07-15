@@ -1,0 +1,27 @@
+{
+  "name": "patrickschuster.github.com",
+  "version": "1.0.0",
+  "description": "personal GH website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "postcss css/main.css -o css/main.min.css --use cssnano",
+    "build:js": "terser js/particles.js -o js/particles.min.js && terser js/search.js -o js/search.min.js && terser js/util.js -o js/util.min.js",
+    "build": "npm run build:css && npm run build:js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrickSchuster/patrickschuster.github.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PatrickSchuster/patrickschuster.github.com/issues"
+  },
+  "homepage": "https://github.com/PatrickSchuster/patrickschuster.github.com#readme",
+  "devDependencies": {
+    "postcss-cli": "^10.1.0",
+    "cssnano":"^6.0.1",
+    "terser":"^5.19.0"
+  }
+}
