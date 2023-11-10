@@ -125,15 +125,24 @@ a {
     display: flex;
     flex-direction: column;
     border: 1px solid white;
-    border-radius: 5px;
+    border-bottom: unset;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     flex: 1;
 }
 
-.card > h3 {
-    background-color: white;
-    text-align: center;
-    color: var(--dark-blue);
-    padding: 0 1em 0 1em;
+.card .card-header {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.card .card-header > h3 {
+    color: white;
+    
 }
 
 .shield {
@@ -166,6 +175,7 @@ a {
 
 ul {
     list-style: none;
+    padding-left: 1em;
 }
 
 ul li::before {
